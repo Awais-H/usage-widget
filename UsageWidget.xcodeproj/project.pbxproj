@@ -377,6 +377,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = UsageWidgetExtension/UsageWidgetExtension.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_DEBUG_DYLIB = NO;
 				INFOPLIST_FILE = UsageWidgetExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Usage Widget";
 				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
@@ -399,6 +400,7 @@
 				CODE_SIGN_ENTITLEMENTS = UsageWidgetApp/UsageWidget.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_DEBUG_DYLIB = NO;
 				INFOPLIST_FILE = UsageWidgetApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Usage Widget";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -420,6 +422,7 @@
 				CODE_SIGN_ENTITLEMENTS = UsageWidgetApp/UsageWidget.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_DEBUG_DYLIB = NO;
 				INFOPLIST_FILE = UsageWidgetApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Usage Widget";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -505,6 +508,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = UsageWidgetExtension/UsageWidgetExtension.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_DEBUG_DYLIB = NO;
 				INFOPLIST_FILE = UsageWidgetExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Usage Widget";
 				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";

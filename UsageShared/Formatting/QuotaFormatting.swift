@@ -2,7 +2,9 @@ import Foundation
 
 enum QuotaFormatting {
     static func resetText(for date: Date?, weekly: Bool) -> String {
-        guard let date else { return "" }
+        guard let date else {
+            return weekly ? "Weekly reset —" : "Resets —"
+        }
 
         if date.timeIntervalSinceNow <= 0 {
             return "Resets soon"
@@ -10,7 +12,7 @@ enum QuotaFormatting {
 
         if weekly {
             let formatter = DateFormatter()
-            formatter.setLocalizedDateFormatFromTemplate("Md")
+            formatter.setLocalizedDateFormatFromTemplate("MMMd")
             return "\(formatter.string(from: date)) reset"
         }
 

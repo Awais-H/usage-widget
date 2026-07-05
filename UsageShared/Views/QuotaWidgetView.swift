@@ -2,41 +2,38 @@ import SwiftUI
 
 struct QuotaColumnView: View {
     let title: String
-    let tint: Color
+    let accent: Color
     let quota: PlatformQuota
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            WidgetTypography.columnTitle(title, tint: tint)
+        VStack(alignment: .leading, spacing: WidgetDesign.columnTitleSpacing) {
+            WidgetTypography.columnTitle(title, accent: accent)
 
-            quotaRow(label: "5h", window: quota.fiveHour, weekly: false)
-            quotaRow(label: "Week", window: quota.sevenDay, weekly: true)
+            VStack(alignment: .leading, spacing: WidgetDesign.rowSpacing) {
+                quotaRow(label: "5h", window: quota.fiveHour, weekly: false)
+                quotaRow(label: "Week", window: quota.sevenDay, weekly: true)
+            }
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private func quotaRow(label: String, window: QuotaWindow, weekly: Bool) -> some View {
-        VStack(alignment: .leading, spacing: 3) {
+        VStack(alignment: .leading, spacing: 4) {
             HStack(spacing: 8) {
                 WidgetTypography.rowLabel(label)
-                    .frame(width: 36, alignment: .leading)
+                    .frame(width: WidgetDesign.rowLabelWidth, alignment: .leading)
 
                 WidgetGlassProgressBar(
                     value: window.remainingPercent,
-                    tint: color(for: window.remainingPercent)
+                    tint: WidgetDesign.progressColor(for: window.remainingPercent)
                 )
 
                 WidgetTypography.percentage(Int(window.remainingPercent.rounded()))
             }
 
             WidgetTypography.resetTime(QuotaFormatting.resetText(for: window.resetsAt, weekly: weekly))
-                .padding(.leading, 44)
+                .padding(.leading, WidgetDesign.rowLabelWidth + 8)
         }
-    }
-
-    private func color(for remaining: Double) -> Color {
-        if remaining > 50 { return .green }
-        if remaining > 20 { return .orange }
-        return .red
     }
 }
 
@@ -44,21 +41,15 @@ struct QuotaWidgetView: View {
     let snapshot: QuotaSnapshot
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .firstTextBaseline) {
-                WidgetTypography.title("AI Usage Left")
-                    .foregroundStyle(.primary)
-
-                Spacer(minLength: 8)
-
-                WidgetTypography.timestamp(
-                    (snapshot.isOffline ? "⚠ " : "") + QuotaFormatting.agoText(since: snapshot.updatedAt)
-                )
-            }
-
+        VStack(alignment: .leading, spacing: WidgetDesign.headerSpacing) {
+            header
             content
         }
         .padding(WidgetDesign.contentPadding)
+    }
+
+    private var header: some View {
+        WidgetTypography.title(WidgetDesign.title)
     }
 
     @ViewBuilder
@@ -68,23 +59,17 @@ struct QuotaWidgetView: View {
         } else if snapshot.claude != nil && snapshot.codex != nil,
                   let claude = snapshot.claude,
                   let codex = snapshot.codex {
-            HStack(alignment: .top, spacing: 14) {
-                QuotaColumnView(title: "Claude", tint: WidgetDesign.claudeTint, quota: claude)
-                Divider().overlay(Color.primary.opacity(0.12))
-                QuotaColumnView(title: "Codex", tint: WidgetDesign.codexTint, quota: codex)
+            HStack(alignment: .top, spacing: WidgetDesign.columnSpacing) {
+                QuotaColumnView(title: "Claude", accent: WidgetDesign.claudeAccent, quota: claude)
+                Rectangle()
+                    .fill(WidgetDesign.divider)
+                    .frame(width: 1)
+                QuotaColumnView(title: "Codex", accent: WidgetDesign.codexAccent, quota: codex)
             }
         } else if let claude = snapshot.claude {
-            HStack {
-                Spacer()
-                QuotaColumnView(title: "Claude", tint: WidgetDesign.claudeTint, quota: claude)
-                Spacer()
-            }
+            QuotaColumnView(title: "Claude", accent: WidgetDesign.claudeAccent, quota: claude)
         } else if let codex = snapshot.codex {
-            HStack {
-                Spacer()
-                QuotaColumnView(title: "Codex", tint: WidgetDesign.codexTint, quota: codex)
-                Spacer()
-            }
+            QuotaColumnView(title: "Codex", accent: WidgetDesign.codexAccent, quota: codex)
         }
     }
 }

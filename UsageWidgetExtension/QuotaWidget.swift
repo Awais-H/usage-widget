@@ -33,12 +33,12 @@ struct QuotaTimelineProvider: TimelineProvider {
     private var placeholderSnapshot: QuotaSnapshot {
         QuotaSnapshot(
             claude: PlatformQuota(
-                fiveHour: QuotaWindow(remainingPercent: 60, resetsAt: nil),
-                sevenDay: QuotaWindow(remainingPercent: 80, resetsAt: nil)
+                fiveHour: QuotaWindow(remainingPercent: 60, resetsAt: .now.addingTimeInterval(3_600)),
+                sevenDay: QuotaWindow(remainingPercent: 80, resetsAt: .now.addingTimeInterval(500_000))
             ),
             codex: PlatformQuota(
-                fiveHour: QuotaWindow(remainingPercent: 45, resetsAt: nil),
-                sevenDay: QuotaWindow(remainingPercent: 90, resetsAt: nil)
+                fiveHour: QuotaWindow(remainingPercent: 45, resetsAt: .now.addingTimeInterval(5_000)),
+                sevenDay: QuotaWindow(remainingPercent: 90, resetsAt: .now.addingTimeInterval(600_000))
             ),
             updatedAt: .now,
             isOffline: false
@@ -56,7 +56,7 @@ struct QuotaWidget: Widget {
                     WidgetGlassBackground()
                 }
         }
-        .configurationDisplayName("AI Usage")
+        .configurationDisplayName(WidgetDesign.title)
         .description("Claude Code and Codex limits with reset times.")
         .supportedFamilies([.systemMedium])
     }
