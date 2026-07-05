@@ -2,8 +2,8 @@ import AppIntents
 import SwiftUI
 
 struct UsageProviderEntity: AppEntity {
-    static var typeDisplayRepresentation = TypeDisplayRepresentation(name: "Provider")
-    static var defaultQuery = UsageProviderQuery()
+    nonisolated(unsafe) static var typeDisplayRepresentation = TypeDisplayRepresentation(name: "Provider")
+    nonisolated(unsafe) static var defaultQuery = UsageProviderQuery()
 
     var id: String
     var displayName: String
@@ -34,8 +34,8 @@ struct UsageProviderQuery: EntityQuery {
 }
 
 struct UsageWidgetConfigurationIntent: WidgetConfigurationIntent {
-    static var title: LocalizedStringResource = "Usage Provider"
-    static var description = IntentDescription("Choose whether to show Claude Code or Codex limits.")
+    nonisolated(unsafe) static var title: LocalizedStringResource = "Usage Provider"
+    nonisolated(unsafe) static var description = IntentDescription("Choose whether to show Claude Code or Codex limits.")
 
     @Parameter(title: "Provider", default: UsageProviderEntity(id: "claude", displayName: "Claude Code"))
     var provider: UsageProviderEntity

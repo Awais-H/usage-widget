@@ -1,14 +1,30 @@
 import Foundation
 
-struct UsageSnapshot: Codable, Sendable {
-    let provider: UsageProviderKind
-    let plan: String?
-    let windows: [UsageWindow]
-    let updatedAt: Date
-    let source: UsageSnapshotSource
-    let message: String?
+public struct UsageSnapshot: Codable, Sendable {
+    public let provider: UsageProviderKind
+    public let plan: String?
+    public let windows: [UsageWindow]
+    public let updatedAt: Date
+    public let source: UsageSnapshotSource
+    public let message: String?
 
-    static func placeholder(for provider: UsageProviderKind) -> UsageSnapshot {
+    public init(
+        provider: UsageProviderKind,
+        plan: String?,
+        windows: [UsageWindow],
+        updatedAt: Date,
+        source: UsageSnapshotSource,
+        message: String?
+    ) {
+        self.provider = provider
+        self.plan = plan
+        self.windows = windows
+        self.updatedAt = updatedAt
+        self.source = source
+        self.message = message
+    }
+
+    public static func placeholder(for provider: UsageProviderKind) -> UsageSnapshot {
         UsageSnapshot(
             provider: provider,
             plan: nil,
@@ -23,7 +39,7 @@ struct UsageSnapshot: Codable, Sendable {
     }
 }
 
-enum UsageSnapshotSource: String, Codable, Sendable {
+public enum UsageSnapshotSource: String, Codable, Sendable {
     case live
     case demo
     case cached

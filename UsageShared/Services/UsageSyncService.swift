@@ -1,8 +1,8 @@
 import Foundation
 import WidgetKit
 
-enum UsageSyncService {
-    static func refreshAllProviders() async {
+public enum UsageSyncService {
+    public static func refreshAllProviders() async {
         async let claude = ClaudeUsageService.fetchSnapshot()
         async let codex = CodexUsageService.fetchSnapshot()
 
@@ -14,7 +14,7 @@ enum UsageSyncService {
         WidgetCenter.shared.reloadAllTimelines()
     }
 
-    static func refresh(provider: UsageProviderKind) async -> UsageSnapshot {
+    public static func refresh(provider: UsageProviderKind) async -> UsageSnapshot {
         let snapshot: UsageSnapshot
         switch provider {
         case .claude:

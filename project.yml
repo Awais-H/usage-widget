@@ -15,37 +15,13 @@ settings:
     CODE_SIGN_STYLE: Automatic
 
 targets:
-  UsageShared-iOS:
-    type: framework
-    platform: iOS
-    sources:
-      - path: UsageShared
-    settings:
-      base:
-        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageShared
-        GENERATE_INFOPLIST_FILE: YES
-        MARKETING_VERSION: "1.0"
-        CURRENT_PROJECT_VERSION: "1"
-
-  UsageShared-macOS:
-    type: framework
-    platform: macOS
-    sources:
-      - path: UsageShared
-    settings:
-      base:
-        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageShared
-        GENERATE_INFOPLIST_FILE: YES
-        MARKETING_VERSION: "1.0"
-        CURRENT_PROJECT_VERSION: "1"
-
   UsageWidgetApp-iOS:
     type: application
     platform: iOS
     sources:
       - path: UsageWidgetApp
+      - path: UsageShared
     dependencies:
-      - target: UsageShared-iOS
       - target: UsageWidgetExtension-iOS
         embed: true
     settings:
@@ -67,8 +43,8 @@ targets:
     platform: macOS
     sources:
       - path: UsageWidgetApp
+      - path: UsageShared
     dependencies:
-      - target: UsageShared-macOS
       - target: UsageWidgetExtension-macOS
         embed: true
     settings:
@@ -89,8 +65,7 @@ targets:
     platform: iOS
     sources:
       - path: UsageWidgetExtension
-    dependencies:
-      - target: UsageShared-iOS
+      - path: UsageShared
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageWidgetExtension
@@ -108,8 +83,7 @@ targets:
     platform: macOS
     sources:
       - path: UsageWidgetExtension
-    dependencies:
-      - target: UsageShared-macOS
+      - path: UsageShared
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageWidgetExtension

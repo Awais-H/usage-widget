@@ -1,10 +1,15 @@
 import SwiftUI
 
-struct LiquidGlassPanel<Content: View>: View {
+public struct LiquidGlassPanel<Content: View>: View {
     let tint: Color
     @ViewBuilder var content: () -> Content
 
-    var body: some View {
+    public init(tint: Color, @ViewBuilder content: @escaping () -> Content) {
+        self.tint = tint
+        self.content = content
+    }
+
+    public var body: some View {
         content()
             .padding(DesignTokens.contentPadding)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -16,10 +21,14 @@ struct LiquidGlassPanel<Content: View>: View {
     }
 }
 
-struct LiquidGlassWidgetBackground: View {
+public struct LiquidGlassWidgetBackground: View {
     let tint: Color
 
-    var body: some View {
+    public init(tint: Color) {
+        self.tint = tint
+    }
+
+    public var body: some View {
         ZStack {
             LinearGradient(
                 colors: [tint.opacity(0.35), tint.opacity(0.08)],

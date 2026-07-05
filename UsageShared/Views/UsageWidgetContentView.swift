@@ -1,10 +1,15 @@
 import SwiftUI
 
-struct UsageWidgetContentView: View {
+public struct UsageWidgetContentView: View {
     let snapshot: UsageSnapshot
     let compact: Bool
 
-    var body: some View {
+    public init(snapshot: UsageSnapshot, compact: Bool) {
+        self.snapshot = snapshot
+        self.compact = compact
+    }
+
+    public var body: some View {
         VStack(alignment: .leading, spacing: DesignTokens.sectionSpacing) {
             header
 
