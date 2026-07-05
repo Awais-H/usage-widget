@@ -6,7 +6,11 @@ enum ClaudeUsageService {
 
     static func fetchSnapshot() async -> UsageSnapshot {
         guard let credentials = ClaudeCredentialReader.read() else {
+            #if os(macOS)
             return demoSnapshot(message: "Sign in to Claude Code on this Mac to load live usage.")
+            #else
+            return demoSnapshot(message: "Run the Mac app once to sync Claude usage to this device.")
+            #endif
         }
 
         do {

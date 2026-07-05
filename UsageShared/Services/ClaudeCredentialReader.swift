@@ -9,19 +9,24 @@ struct ClaudeOAuthCredentials: Sendable {
 }
 
 enum ClaudeCredentialReader {
+    static func read() -> ClaudeOAuthCredentials? {
+        #if os(macOS)
+        if let credentials = readFromFile() {
+            return credentials
+        }
+        return readFromKeychain()
+        #else
+        return nil
+        #endif
+    }
+
+    #if os(macOS)
     private static let credentialsFileURL: URL = {
         FileManager.default.homeDirectoryForCurrentUser
             .appendingPathComponent(".claude/.credentials.json")
     }()
 
     private static let keychainService = "Claude Code-credentials"
-
-    static func read() -> ClaudeOAuthCredentials? {
-        if let credentials = readFromFile() {
-            return credentials
-        }
-        return readFromKeychain()
-    }
 
     private static func readFromFile() -> ClaudeOAuthCredentials? {
         guard
@@ -83,4 +88,5 @@ enum ClaudeCredentialReader {
             subscriptionType: subscriptionType
         )
     }
+    #endif
 }

@@ -7,7 +7,11 @@ enum CodexUsageService {
 
     static func fetchSnapshot() async -> UsageSnapshot {
         guard let credentials = CodexCredentialReader.read() else {
+            #if os(macOS)
             return demoSnapshot(message: "Run `codex login` on this Mac to load live usage.")
+            #else
+            return demoSnapshot(message: "Run the Mac app once to sync Codex usage to this device.")
+            #endif
         }
 
         do {

@@ -7,12 +7,8 @@ struct CodexOAuthCredentials: Sendable {
 }
 
 enum CodexCredentialReader {
-    private static let authFileURL: URL = {
-        FileManager.default.homeDirectoryForCurrentUser
-            .appendingPathComponent(".codex/auth.json")
-    }()
-
     static func read() -> CodexOAuthCredentials? {
+        #if os(macOS)
         guard
             let data = try? Data(contentsOf: authFileURL),
             let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
@@ -28,5 +24,15 @@ enum CodexCredentialReader {
             refreshToken: tokens["refresh_token"] as? String,
             accountID: tokens["account_id"] as? String
         )
+        #else
+        return nil
+        #endif
     }
+
+    #if os(macOS)
+    private static let authFileURL: URL = {
+        FileManager.default.homeDirectoryForCurrentUser
+            .appendingPathComponent(".codex/auth.json")
+    }()
+    #endif
 }
