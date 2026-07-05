@@ -13,13 +13,4 @@ Claude Code and Codex usage on your iPhone Home Screen. Medium widget — **5h**
 
 Re-run from Xcode about once a week if using a free Apple ID (install expires ~7 days).
 
-## Widget
-
-| | |
-|---|---|
-| **% / bar** | Used (90% = 90% of limit consumed) |
-| **Color** | Green <50% · Orange 50–80% · Red >80% |
-| **Reset line** | `14:30 reset` (5h) or `Jan 19 reset` (week) |
-| **No token** | 0%, no reset line |
-
 MIT
