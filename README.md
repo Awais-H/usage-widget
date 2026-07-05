@@ -4,7 +4,7 @@
 
 Claude Code and Codex usage on your iPhone Home Screen.
 
-Medium widget, two columns, **5h** + **Week** bars. Each bar shows **how much you’ve used** (not how much is left) — `90%` means 90% of that limit consumed. Reset times appear under each bar when tokens are imported.
+Medium widget, two columns, **5h** + **Week** bars. Each bar shows **how much you’ve used**
 
 ## Requirements
 
