@@ -1,18 +1,14 @@
-node_modules/
-dist/
-out/
-release/
 .DS_Store
 *.log
 .env
 .env.local
 
-# Swift / Xcode
-native/**/DerivedData/
-native/**/build/
-native/**/*.xcuserstate
-native/**/*.xcuserdatad/
-native/**/xcuserdata/
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
 *.xccheckout
 *.moved-aside
 *.hmap

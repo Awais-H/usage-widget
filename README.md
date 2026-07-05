@@ -1,13 +1,13 @@
 # Usage Widget
 
-Track AI coding assistant usage limits on Mac and iPhone.
+SwiftUI + WidgetKit for iPhone and Mac. Shows **Claude Code** or **Codex** session and weekly limits with reset times in a liquid glass layout.
 
-## Native widgets (Claude Code & Codex)
-
-SwiftUI + WidgetKit app with liquid glass UI. Shows 5-hour session and 7-day weekly limits with reset times.
+## Setup
 
 ```bash
-cd native && brew install xcodegen && xcodegen generate && open UsageWidget.xcodeproj
+brew install xcodegen
+xcodegen generate
+open UsageWidget.xcodeproj
 ```
 
 1. Set your Development Team in Xcode.
@@ -16,23 +16,6 @@ cd native && brew install xcodegen && xcodegen generate && open UsageWidget.xcod
 
 Requires Xcode 26. Sign in locally first: `claude /login` and/or `codex login`.
 
-App Group (change in entitlements + `UsageSharedStore.swift`): `group.dev.awaishashar.usage-widget`
-
-## Menu bar app (Cursor)
-
-Electron tray app for Cursor subscription usage.
-
-```bash
-npm install && npm run dev
-```
-
-Requires macOS, Node 18+, and Cursor signed in.
-
-## Layout
-
-```text
-native/   iPhone + Mac widgets
-src/      Cursor menu bar app
-```
+App Group (change in entitlements + `UsageShared/Store/UsageSharedStore.swift`): `group.dev.awaishashar.usage-widget`
 
 MIT
