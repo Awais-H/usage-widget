@@ -1,0 +1,146 @@
+name: UsageWidget
+options:
+  bundleIdPrefix: dev.awaishashar
+  deploymentTarget:
+    iOS: "26.0"
+    macOS: "26.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  UsageShared-iOS:
+    type: framework
+    platform: iOS
+    sources:
+      - path: UsageShared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageShared
+        GENERATE_INFOPLIST_FILE: YES
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+
+  UsageShared-macOS:
+    type: framework
+    platform: macOS
+    sources:
+      - path: UsageShared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageShared
+        GENERATE_INFOPLIST_FILE: YES
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+
+  UsageWidgetApp-iOS:
+    type: application
+    platform: iOS
+    sources:
+      - path: UsageWidgetApp
+    dependencies:
+      - target: UsageShared-iOS
+      - target: UsageWidgetExtension-iOS
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageWidget
+        INFOPLIST_FILE: UsageWidgetApp/Info.plist
+        CODE_SIGN_ENTITLEMENTS: UsageWidgetApp/UsageWidget.entitlements
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
+    entitlements:
+      path: UsageWidgetApp/UsageWidget.entitlements
+    info:
+      path: UsageWidgetApp/Info.plist
+
+  UsageWidgetApp-macOS:
+    type: application
+    platform: macOS
+    sources:
+      - path: UsageWidgetApp
+    dependencies:
+      - target: UsageShared-macOS
+      - target: UsageWidgetExtension-macOS
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageWidget
+        INFOPLIST_FILE: UsageWidgetApp/Info.plist
+        CODE_SIGN_ENTITLEMENTS: UsageWidgetApp/UsageWidget.entitlements
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    entitlements:
+      path: UsageWidgetApp/UsageWidget.entitlements
+    info:
+      path: UsageWidgetApp/Info.plist
+
+  UsageWidgetExtension-iOS:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: UsageWidgetExtension
+    dependencies:
+      - target: UsageShared-iOS
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageWidgetExtension
+        INFOPLIST_FILE: UsageWidgetExtension/Info.plist
+        CODE_SIGN_ENTITLEMENTS: UsageWidgetExtension/UsageWidgetExtension.entitlements
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+    entitlements:
+      path: UsageWidgetExtension/UsageWidgetExtension.entitlements
+    info:
+      path: UsageWidgetExtension/Info.plist
+
+  UsageWidgetExtension-macOS:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: UsageWidgetExtension
+    dependencies:
+      - target: UsageShared-macOS
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageWidgetExtension
+        INFOPLIST_FILE: UsageWidgetExtension/Info.plist
+        CODE_SIGN_ENTITLEMENTS: UsageWidgetExtension/UsageWidgetExtension.entitlements
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+    entitlements:
+      path: UsageWidgetExtension/UsageWidgetExtension.entitlements
+    info:
+      path: UsageWidgetExtension/Info.plist
+
+schemes:
+  UsageWidget-iOS:
+    build:
+      targets:
+        UsageWidgetApp-iOS: all
+        UsageWidgetExtension-iOS: all
+    run:
+      config: Debug
+      target: UsageWidgetApp-iOS
+    archive:
+      config: Release
+
+  UsageWidget-macOS:
+    build:
+      targets:
+        UsageWidgetApp-macOS: all
+        UsageWidgetExtension-macOS: all
+    run:
+      config: Debug
+      target: UsageWidgetApp-macOS
+    archive:
+      config: Release
