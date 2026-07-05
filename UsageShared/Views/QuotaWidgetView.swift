@@ -4,6 +4,7 @@ struct QuotaColumnView: View {
     let title: String
     let accent: Color
     let quota: PlatformQuota
+    let showsResetTimes: Bool
 
     var body: some View {
         VStack(alignment: .leading, spacing: WidgetDesign.columnTitleSpacing) {
@@ -25,15 +26,23 @@ struct QuotaColumnView: View {
 
                 WidgetGlassProgressBar(
                     value: window.remainingPercent,
-                    tint: WidgetDesign.progressColor(for: window.remainingPercent)
+                    tint: barColor(for: window.remainingPercent)
                 )
 
                 WidgetTypography.percentage(Int(window.remainingPercent.rounded()))
             }
 
-            WidgetTypography.resetTime(QuotaFormatting.resetText(for: window.resetsAt, weekly: weekly))
-                .padding(.leading, WidgetDesign.rowLabelWidth + 8)
+            if showsResetTimes,
+               let resetText = QuotaFormatting.resetText(for: window.resetsAt, weekly: weekly) {
+                WidgetTypography.resetTime(resetText)
+                    .padding(.leading, WidgetDesign.rowLabelWidth + 8)
+            }
         }
+    }
+
+    private func barColor(for remaining: Double) -> Color {
+        guard showsResetTimes else { return WidgetDesign.progressBarTrack }
+        return WidgetDesign.progressColor(for: remaining)
     }
 }
 
@@ -43,7 +52,7 @@ struct QuotaWidgetView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: WidgetDesign.headerSpacing) {
             header
-            content
+            dualColumnContent
         }
         .padding(WidgetDesign.contentPadding)
     }
@@ -52,29 +61,28 @@ struct QuotaWidgetView: View {
         WidgetTypography.title(WidgetDesign.title)
     }
 
-    @ViewBuilder
-    private var content: some View {
-        if snapshot.claude == nil && snapshot.codex == nil {
-            WidgetTypography.body("Import tokens on your Mac, paste JSON here once, then add this widget.")
-        } else if snapshot.claude != nil && snapshot.codex != nil,
-                  let claude = snapshot.claude,
-                  let codex = snapshot.codex {
-            HStack(alignment: .top, spacing: WidgetDesign.columnSpacing) {
-                QuotaColumnView(title: "Claude", accent: WidgetDesign.claudeAccent, quota: claude)
-                Rectangle()
-                    .fill(WidgetDesign.divider)
-                    .frame(width: 1)
-                QuotaColumnView(title: "Codex", accent: WidgetDesign.codexAccent, quota: codex)
-            }
-        } else if let claude = snapshot.claude {
-            QuotaColumnView(title: "Claude", accent: WidgetDesign.claudeAccent, quota: claude)
-        } else if let codex = snapshot.codex {
-            QuotaColumnView(title: "Codex", accent: WidgetDesign.codexAccent, quota: codex)
+    private var dualColumnContent: some View {
+        HStack(alignment: .top, spacing: WidgetDesign.columnSpacing) {
+            QuotaColumnView(
+                title: "Claude",
+                accent: WidgetDesign.claudeAccent,
+                quota: snapshot.claude ?? .empty,
+                showsResetTimes: snapshot.claude != nil
+            )
+            Rectangle()
+                .fill(WidgetDesign.divider)
+                .frame(width: 1)
+            QuotaColumnView(
+                title: "Codex",
+                accent: WidgetDesign.codexAccent,
+                quota: snapshot.codex ?? .empty,
+                showsResetTimes: snapshot.codex != nil
+            )
         }
     }
 }
 
-#Preview {
+#Preview("With data") {
     QuotaWidgetView(
         snapshot: QuotaSnapshot(
             claude: PlatformQuota(
@@ -85,6 +93,20 @@ struct QuotaWidgetView: View {
                 fiveHour: QuotaWindow(remainingPercent: 41, resetsAt: Date().addingTimeInterval(5_000)),
                 sevenDay: QuotaWindow(remainingPercent: 85, resetsAt: Date().addingTimeInterval(600_000))
             ),
+            updatedAt: .now,
+            isOffline: false
+        )
+    )
+    .background {
+        WidgetGlassBackground()
+    }
+}
+
+#Preview("No data") {
+    QuotaWidgetView(
+        snapshot: QuotaSnapshot(
+            claude: nil,
+            codex: nil,
             updatedAt: .now,
             isOffline: false
         )

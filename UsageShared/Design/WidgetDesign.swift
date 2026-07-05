@@ -93,7 +93,7 @@ struct WidgetGlassProgressBar: View {
         GeometryReader { geometry in
             let width = geometry.size.width
             let height = geometry.size.height
-            let fillWidth = max(height, width * clampedFraction)
+            let fillWidth = clampedFraction > 0 ? max(height, width * clampedFraction) : 0
 
             ZStack(alignment: .leading) {
                 Capsule(style: .continuous)

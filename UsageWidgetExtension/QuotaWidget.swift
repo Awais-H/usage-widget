@@ -8,11 +8,11 @@ struct QuotaEntry: TimelineEntry {
 
 struct QuotaTimelineProvider: TimelineProvider {
     func placeholder(in context: Context) -> QuotaEntry {
-        QuotaEntry(date: .now, snapshot: placeholderSnapshot)
+        QuotaEntry(date: .now, snapshot: emptySnapshot)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (QuotaEntry) -> Void) {
-        completion(QuotaEntry(date: .now, snapshot: QuotaCache.load() ?? placeholderSnapshot))
+        completion(QuotaEntry(date: .now, snapshot: QuotaCache.load() ?? emptySnapshot))
     }
 
     func getTimeline(in context: Context, completion: @escaping @Sendable (Timeline<QuotaEntry>) -> Void) {
@@ -21,7 +21,7 @@ struct QuotaTimelineProvider: TimelineProvider {
             if TokenStore.hasAnyToken {
                 snapshot = await QuotaFetcher.refreshSnapshot()
             } else {
-                snapshot = QuotaCache.load() ?? placeholderSnapshot
+                snapshot = QuotaCache.load() ?? emptySnapshot
             }
 
             let entry = QuotaEntry(date: .now, snapshot: snapshot)
@@ -30,16 +30,10 @@ struct QuotaTimelineProvider: TimelineProvider {
         }
     }
 
-    private var placeholderSnapshot: QuotaSnapshot {
+    private var emptySnapshot: QuotaSnapshot {
         QuotaSnapshot(
-            claude: PlatformQuota(
-                fiveHour: QuotaWindow(remainingPercent: 60, resetsAt: .now.addingTimeInterval(3_600)),
-                sevenDay: QuotaWindow(remainingPercent: 80, resetsAt: .now.addingTimeInterval(500_000))
-            ),
-            codex: PlatformQuota(
-                fiveHour: QuotaWindow(remainingPercent: 45, resetsAt: .now.addingTimeInterval(5_000)),
-                sevenDay: QuotaWindow(remainingPercent: 90, resetsAt: .now.addingTimeInterval(600_000))
-            ),
+            claude: nil,
+            codex: nil,
             updatedAt: .now,
             isOffline: false
         )

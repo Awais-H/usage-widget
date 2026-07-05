@@ -1,10 +1,8 @@
 import Foundation
 
 enum QuotaFormatting {
-    static func resetText(for date: Date?, weekly: Bool) -> String {
-        guard let date else {
-            return weekly ? "Weekly reset —" : "Resets —"
-        }
+    static func resetText(for date: Date?, weekly: Bool) -> String? {
+        guard let date else { return nil }
 
         if date.timeIntervalSinceNow <= 0 {
             return "Resets soon"

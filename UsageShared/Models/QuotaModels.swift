@@ -25,6 +25,11 @@ struct QuotaWindow: Codable, Sendable, Hashable {
 struct PlatformQuota: Codable, Sendable, Hashable {
     let fiveHour: QuotaWindow
     let sevenDay: QuotaWindow
+
+    static let empty = PlatformQuota(
+        fiveHour: QuotaWindow(remainingPercent: 0, resetsAt: nil),
+        sevenDay: QuotaWindow(remainingPercent: 0, resetsAt: nil)
+    )
 }
 
 struct QuotaSnapshot: Codable, Sendable {
