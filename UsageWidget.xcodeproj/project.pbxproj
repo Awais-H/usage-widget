@@ -7,94 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03A184A7C983B8F56523438E /* UsageLimitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D63D03C995F28FCDE3223 /* UsageLimitRowView.swift */; };
-		03A8C735B1FA25931A1E5060 /* UsageSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E2434810A1B0BC4C29C4AE /* UsageSnapshot.swift */; };
-		0463F93C64DC05A6E729F665 /* UsageSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E2434810A1B0BC4C29C4AE /* UsageSnapshot.swift */; };
-		05C750BE64E0077AF36D6F0B /* UsageWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C40F80B0BA545FDC1E2489 /* UsageWindow.swift */; };
-		0A010D8C12B2B5FB13D01FDF /* UsageLimitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D63D03C995F28FCDE3223 /* UsageLimitRowView.swift */; };
-		1451524C413B0175955EF9C8 /* ProviderBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4A414F003F49B6B20D83B /* ProviderBadgeView.swift */; };
-		14859B83AF15860B6B3440E1 /* UsageWidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E188EA7DEBFDEF58D7D924 /* UsageWidgetContentView.swift */; };
-		1A71FB2658FFBEB31363CB36 /* UsageWidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E188EA7DEBFDEF58D7D924 /* UsageWidgetContentView.swift */; };
-		1C648DA5E843C2E3055412F0 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9633B2C32B1299356D30F /* DesignTokens.swift */; };
-		1C92C2EB84581CA88355908E /* UsageTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF4817F8113625D28181BD /* UsageTimelineProvider.swift */; };
-		1E969A4EB8698D2E709F3D59 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9633B2C32B1299356D30F /* DesignTokens.swift */; };
-		2371D88E910E134246834FF1 /* UsageResetFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB57C779ACCDD5779937C4 /* UsageResetFormatter.swift */; };
-		237D68EF31DDCD94BB6E91D0 /* ClaudeCredentialReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F568322123F55FB2203076 /* ClaudeCredentialReader.swift */; };
-		23ED5D487E5792C58D840DB6 /* UsageWidgetConfigurationIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E526BF3F79FDF76AD36C1 /* UsageWidgetConfigurationIntent.swift */; };
+		03E53ACF20115A70C5623907 /* QuotaCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DADB8A140EE52B475F25A /* QuotaCache.swift */; };
+		05E4DCF79D8B0F88D81AB5E8 /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E0540146B8DD6703D7C48 /* TokenStore.swift */; };
 		295EC12277379FA2E21C369D /* UsageWidgetExtension-iOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3C4D19036B48C737BB73BE4 /* UsageWidgetExtension-iOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2DE4DD60028405D16263B333 /* LiquidGlassPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E16E29C7FA3EA1813AC137 /* LiquidGlassPanel.swift */; };
-		2E8A5F76EF5DA5D1D8FB1B94 /* UsageResetFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB57C779ACCDD5779937C4 /* UsageResetFormatter.swift */; };
-		3400BC76877347CC7BEB6DB2 /* UsageWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC5706B546917B75B76A64 /* UsageWidgetApp.swift */; };
-		36502DF0FDD636115662CF44 /* UsageWidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E188EA7DEBFDEF58D7D924 /* UsageWidgetContentView.swift */; };
-		3ED55306F1C3A3763B26175A /* UsageResetFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB57C779ACCDD5779937C4 /* UsageResetFormatter.swift */; };
-		3EDA0CB59AA99D4F289ED2A6 /* CodexUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB7B0A98A740DC90F230F /* CodexUsageService.swift */; };
-		3FCD8A427E3299FC3E2EB1E2 /* UsageWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C40F80B0BA545FDC1E2489 /* UsageWindow.swift */; };
-		4088D6148DE779A698FEE37B /* ClaudeUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BC94B4F54242D50A43F7 /* ClaudeUsageService.swift */; };
-		4565D4DA58CBD61E080B11FA /* CodexCredentialReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97FE634A02C58D11F7D8312 /* CodexCredentialReader.swift */; };
-		469BA694111661A35EEE26D0 /* UsageSharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E572A0812504D983FFB8766 /* UsageSharedStore.swift */; };
-		4774656661BA896769168243 /* CodexUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB7B0A98A740DC90F230F /* CodexUsageService.swift */; };
-		4BA5D91D3C33A43144450598 /* UsageLimitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D63D03C995F28FCDE3223 /* UsageLimitRowView.swift */; };
+		2B00BEED4F5EDDD348A5588A /* QuotaFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C5D4C792A919030D8AF67 /* QuotaFormatting.swift */; };
 		4E17CB7F230960F1B4941A19 /* UsageWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC5706B546917B75B76A64 /* UsageWidgetApp.swift */; };
-		4F22E060EE94B2074F729DD4 /* UsageWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C40F80B0BA545FDC1E2489 /* UsageWindow.swift */; };
-		51C8164410698D501AB6493F /* ProviderBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4A414F003F49B6B20D83B /* ProviderBadgeView.swift */; };
-		53F927F82C1A3FDDFFD8D694 /* CodexCredentialReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97FE634A02C58D11F7D8312 /* CodexCredentialReader.swift */; };
-		5978B5D11D15022476F47D48 /* ProviderBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4A414F003F49B6B20D83B /* ProviderBadgeView.swift */; };
-		59FF7906D09D9C54B35DAC4A /* LiquidGlassPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E16E29C7FA3EA1813AC137 /* LiquidGlassPanel.swift */; };
-		611CA4AAF3157B9BE6488129 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9633B2C32B1299356D30F /* DesignTokens.swift */; };
-		617CCB5995D75A4F9719D83E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10D425A19019701FCE4D50FE /* Assets.xcassets */; };
-		624BC106F9561172DF0AE64A /* UsageProviderKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169139A6BBFEBCFEEC98AE22 /* UsageProviderKind.swift */; };
-		628D5AE6919F41273BE37585 /* ClaudeUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BC94B4F54242D50A43F7 /* ClaudeUsageService.swift */; };
-		661419560F912BC4EBCFF95C /* ProviderBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4A414F003F49B6B20D83B /* ProviderBadgeView.swift */; };
 		6634D8C1173E062306DD87DA /* UsageWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5689B4514139E30663205E2 /* UsageWidgetBundle.swift */; };
-		6793D3DFC30E4168C1EEEEC1 /* UsageProviderKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169139A6BBFEBCFEEC98AE22 /* UsageProviderKind.swift */; };
-		68B3F0268D6C48E707D9CED5 /* UsageTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF4817F8113625D28181BD /* UsageTimelineProvider.swift */; };
-		73BE80D0904A85A84441827E /* UsageDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0866274F0F81507D276D3723 /* UsageDashboardViewModel.swift */; };
-		75B618CDF274052D3F190362 /* ClaudeCredentialReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F568322123F55FB2203076 /* ClaudeCredentialReader.swift */; };
-		7DEAAD3715D173DB43E86548 /* UsageSharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E572A0812504D983FFB8766 /* UsageSharedStore.swift */; };
-		848E0EF710D143422DB8074A /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9633B2C32B1299356D30F /* DesignTokens.swift */; };
-		88AEF36BC8970F3B818285D1 /* UsageSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BAD66B72B8D9F8E06ABC1 /* UsageSyncService.swift */; };
-		8B4849D08A83620C7CD78EF9 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79D3C09C576F900AB1FEBF /* AppRootView.swift */; };
-		905014FBE7174AB7C15120D1 /* UsageSharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E572A0812504D983FFB8766 /* UsageSharedStore.swift */; };
-		913471F0F602C5D7823FACAE /* UsageWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A094C06D6C4A448DC4031DC /* UsageWidget.swift */; };
-		91CCB0BBA7FA3712738331D0 /* LiquidGlassPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E16E29C7FA3EA1813AC137 /* LiquidGlassPanel.swift */; };
-		95C3781418BE76D0C94EC762 /* UsageWidgetConfigurationIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E526BF3F79FDF76AD36C1 /* UsageWidgetConfigurationIntent.swift */; };
-		968EFA28C82DBCDCD1BE227E /* UsageSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BAD66B72B8D9F8E06ABC1 /* UsageSyncService.swift */; };
-		98C7C7392338DC67094A48C6 /* UsageDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0866274F0F81507D276D3723 /* UsageDashboardViewModel.swift */; };
-		9EDF74DC3120F7F0D4E384B4 /* UsageWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5689B4514139E30663205E2 /* UsageWidgetBundle.swift */; };
-		AB5A0F9C8483EFCF9479C346 /* LiquidGlassPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E16E29C7FA3EA1813AC137 /* LiquidGlassPanel.swift */; };
-		ACA4216D5DDF4DA3F820381B /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79D3C09C576F900AB1FEBF /* AppRootView.swift */; };
-		B05F32D581536E80DE4C283B /* UsageSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BAD66B72B8D9F8E06ABC1 /* UsageSyncService.swift */; };
-		B60FBA5DC2599EE56F2177CF /* UsageProviderKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169139A6BBFEBCFEEC98AE22 /* UsageProviderKind.swift */; };
-		BA3F9680B7511CC5AEF61F1E /* UsageWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A094C06D6C4A448DC4031DC /* UsageWidget.swift */; };
-		BC33CE7E6210DC3B7AA6ADD1 /* UsageSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E2434810A1B0BC4C29C4AE /* UsageSnapshot.swift */; };
-		BE59460B34D8136C916B6CC8 /* UsageSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E2434810A1B0BC4C29C4AE /* UsageSnapshot.swift */; };
-		C1B2C08ABF7AC8389AEE29EF /* UsageWidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E188EA7DEBFDEF58D7D924 /* UsageWidgetContentView.swift */; };
-		C56EE8F6EBA0D324A4B98CD0 /* CodexCredentialReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97FE634A02C58D11F7D8312 /* CodexCredentialReader.swift */; };
-		C869260E303E0FA2AEB6ADCD /* UsageLimitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D63D03C995F28FCDE3223 /* UsageLimitRowView.swift */; };
-		CB8E79D01B23451C770C4A4B /* ClaudeCredentialReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F568322123F55FB2203076 /* ClaudeCredentialReader.swift */; };
-		CC4DBF8E135D969EA753CDF3 /* UsageWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C40F80B0BA545FDC1E2489 /* UsageWindow.swift */; };
-		D06BC46BA47C50F4EBCCBAE6 /* UsageSharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E572A0812504D983FFB8766 /* UsageSharedStore.swift */; };
-		D9F7F4208DE672553BEC5125 /* ClaudeUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BC94B4F54242D50A43F7 /* ClaudeUsageService.swift */; };
-		DB8CB2A114F98F6FD84D0F36 /* CodexUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB7B0A98A740DC90F230F /* CodexUsageService.swift */; };
-		DBDF750EEE7E2DBDC6109E0D /* UsageWidgetExtension-macOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 21130C040F0D4E198F62D144 /* UsageWidgetExtension-macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6FD834C5E3C7F97E9A11A861 /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEC867AC1675DC813E2EAAB /* ImportView.swift */; };
+		7B0E159BA8EC06BFE94D6EA0 /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E0540146B8DD6703D7C48 /* TokenStore.swift */; };
+		7C648FD9A14FACA0E94B7CF6 /* QuotaWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA56744DA9B4CED78EA939A /* QuotaWidgetView.swift */; };
+		868F2E16BAE495A8610E9FB9 /* QuotaWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6199F2BA948EA3B188AF1C64 /* QuotaWidget.swift */; };
+		96CBA85310576B396437BDE4 /* QuotaCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DADB8A140EE52B475F25A /* QuotaCache.swift */; };
+		ABA2D15C738B6891D8286E08 /* QuotaFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC229F2ABC714C29BD3FCD99 /* QuotaFetcher.swift */; };
+		B17E4DED82FDDEE99BBF6617 /* QuotaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4102BB9B493ED9C676567 /* QuotaModels.swift */; };
+		CE0261B7F86E3DA3D2E9F344 /* QuotaFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC229F2ABC714C29BD3FCD99 /* QuotaFetcher.swift */; };
+		DCEDC848B592BB26BDEFB2E6 /* QuotaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4102BB9B493ED9C676567 /* QuotaModels.swift */; };
 		DEBB0F8918E8B2820E3D6429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10D425A19019701FCE4D50FE /* Assets.xcassets */; };
-		E074230A2C0F84659FA9E6C6 /* UsageProviderKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169139A6BBFEBCFEEC98AE22 /* UsageProviderKind.swift */; };
-		E1CA67C4F3BE97E049E88D9E /* CodexUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DDB7B0A98A740DC90F230F /* CodexUsageService.swift */; };
-		E2A8057B8E0FBB9409FAA37B /* ClaudeCredentialReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F568322123F55FB2203076 /* ClaudeCredentialReader.swift */; };
-		EE8AA6C243FBDF186AEFC66D /* ClaudeUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3054BC94B4F54242D50A43F7 /* ClaudeUsageService.swift */; };
-		F609F215EAC6C442280835C0 /* CodexCredentialReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97FE634A02C58D11F7D8312 /* CodexCredentialReader.swift */; };
-		FF68E8156F9A754C75747424 /* UsageSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BAD66B72B8D9F8E06ABC1 /* UsageSyncService.swift */; };
-		FFC8155ECB9273C3181C44A4 /* UsageResetFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB57C779ACCDD5779937C4 /* UsageResetFormatter.swift */; };
+		E0BB527A7053197746B4227D /* QuotaWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA56744DA9B4CED78EA939A /* QuotaWidgetView.swift */; };
+		ECA8837BD17CE983808CF5CA /* QuotaFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C5D4C792A919030D8AF67 /* QuotaFormatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		494FB0943F7CF81F80829E9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6802D8E7B00E3FC5C2ACFF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6B6AF000A4D8ADB913E074E9;
-			remoteInfo = "UsageWidgetExtension-macOS";
-		};
 		D8F65C75C724FDA914BB1DC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C6802D8E7B00E3FC5C2ACFF7 /* Project object */;
@@ -116,70 +49,33 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB95C31ADA3032900FEF36BC /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				DBDF750EEE7E2DBDC6109E0D /* UsageWidgetExtension-macOS.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		06A4A414F003F49B6B20D83B /* ProviderBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderBadgeView.swift; sourceTree = "<group>"; };
-		06DDB7B0A98A740DC90F230F /* CodexUsageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexUsageService.swift; sourceTree = "<group>"; };
 		07485F8D0FC03FCFF50CC98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		0866274F0F81507D276D3723 /* UsageDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageDashboardViewModel.swift; sourceTree = "<group>"; };
+		0F4DADB8A140EE52B475F25A /* QuotaCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaCache.swift; sourceTree = "<group>"; };
 		10D425A19019701FCE4D50FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		169139A6BBFEBCFEEC98AE22 /* UsageProviderKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageProviderKind.swift; sourceTree = "<group>"; };
-		1E572A0812504D983FFB8766 /* UsageSharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageSharedStore.swift; sourceTree = "<group>"; };
-		21130C040F0D4E198F62D144 /* UsageWidgetExtension-macOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "UsageWidgetExtension-macOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DC5706B546917B75B76A64 /* UsageWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageWidgetApp.swift; sourceTree = "<group>"; };
-		25C40F80B0BA545FDC1E2489 /* UsageWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageWindow.swift; sourceTree = "<group>"; };
-		3054BC94B4F54242D50A43F7 /* ClaudeUsageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeUsageService.swift; sourceTree = "<group>"; };
-		44E188EA7DEBFDEF58D7D924 /* UsageWidgetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageWidgetContentView.swift; sourceTree = "<group>"; };
-		51F568322123F55FB2203076 /* ClaudeCredentialReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeCredentialReader.swift; sourceTree = "<group>"; };
-		59E16E29C7FA3EA1813AC137 /* LiquidGlassPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidGlassPanel.swift; sourceTree = "<group>"; };
+		4EEC867AC1675DC813E2EAAB /* ImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportView.swift; sourceTree = "<group>"; };
+		6199F2BA948EA3B188AF1C64 /* QuotaWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaWidget.swift; sourceTree = "<group>"; };
 		651DFBD7A7D8F7AD22990531 /* UsageWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UsageWidgetExtension.entitlements; sourceTree = "<group>"; };
-		67E2434810A1B0BC4C29C4AE /* UsageSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageSnapshot.swift; sourceTree = "<group>"; };
-		8A094C06D6C4A448DC4031DC /* UsageWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageWidget.swift; sourceTree = "<group>"; };
+		8F1C5D4C792A919030D8AF67 /* QuotaFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaFormatting.swift; sourceTree = "<group>"; };
 		A5689B4514139E30663205E2 /* UsageWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageWidgetBundle.swift; sourceTree = "<group>"; };
-		B12C039E5DBB340BC6F43826 /* UsageWidgetApp-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UsageWidgetApp-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1AB57C779ACCDD5779937C4 /* UsageResetFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageResetFormatter.swift; sourceTree = "<group>"; };
 		B3C4D19036B48C737BB73BE4 /* UsageWidgetExtension-iOS.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = "UsageWidgetExtension-iOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B640D8DC6AB17329FD49BC88 /* UsageWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UsageWidget.entitlements; sourceTree = "<group>"; };
-		BAFF4817F8113625D28181BD /* UsageTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageTimelineProvider.swift; sourceTree = "<group>"; };
-		BC3D63D03C995F28FCDE3223 /* UsageLimitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageLimitRowView.swift; sourceTree = "<group>"; };
+		BB2E0540146B8DD6703D7C48 /* TokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStore.swift; sourceTree = "<group>"; };
+		C7C4102BB9B493ED9C676567 /* QuotaModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaModels.swift; sourceTree = "<group>"; };
 		CA541A35157B7309AA8A8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CC229F2ABC714C29BD3FCD99 /* QuotaFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaFetcher.swift; sourceTree = "<group>"; };
 		D9BE702D4614FED0795D1E57 /* UsageWidgetApp-iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "UsageWidgetApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8D9633B2C32B1299356D30F /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
-		EA6BAD66B72B8D9F8E06ABC1 /* UsageSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageSyncService.swift; sourceTree = "<group>"; };
-		F97FE634A02C58D11F7D8312 /* CodexCredentialReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexCredentialReader.swift; sourceTree = "<group>"; };
-		FC79D3C09C576F900AB1FEBF /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
-		FF3E526BF3F79FDF76AD36C1 /* UsageWidgetConfigurationIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageWidgetConfigurationIntent.swift; sourceTree = "<group>"; };
+		FBA56744DA9B4CED78EA939A /* QuotaWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaWidgetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		1503A92CE980D4B6FBBD9E5B /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				1E572A0812504D983FFB8766 /* UsageSharedStore.swift */,
-			);
-			path = Store;
-			sourceTree = "<group>";
-		};
 		53CCACC72766FB0D1A65E4B4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				51F568322123F55FB2203076 /* ClaudeCredentialReader.swift */,
-				3054BC94B4F54242D50A43F7 /* ClaudeUsageService.swift */,
-				F97FE634A02C58D11F7D8312 /* CodexCredentialReader.swift */,
-				06DDB7B0A98A740DC90F230F /* CodexUsageService.swift */,
-				EA6BAD66B72B8D9F8E06ABC1 /* UsageSyncService.swift */,
+				CC229F2ABC714C29BD3FCD99 /* QuotaFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -188,10 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				07485F8D0FC03FCFF50CC98B /* Info.plist */,
-				BAFF4817F8113625D28181BD /* UsageTimelineProvider.swift */,
-				8A094C06D6C4A448DC4031DC /* UsageWidget.swift */,
+				6199F2BA948EA3B188AF1C64 /* QuotaWidget.swift */,
 				A5689B4514139E30663205E2 /* UsageWidgetBundle.swift */,
-				FF3E526BF3F79FDF76AD36C1 /* UsageWidgetConfigurationIntent.swift */,
 				651DFBD7A7D8F7AD22990531 /* UsageWidgetExtension.entitlements */,
 			);
 			path = UsageWidgetExtension;
@@ -201,9 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				D9BE702D4614FED0795D1E57 /* UsageWidgetApp-iOS.app */,
-				B12C039E5DBB340BC6F43826 /* UsageWidgetApp-macOS.app */,
 				B3C4D19036B48C737BB73BE4 /* UsageWidgetExtension-iOS.appex */,
-				21130C040F0D4E198F62D144 /* UsageWidgetExtension-macOS.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,7 +103,7 @@
 		8588BD3A98352A5DCBE2B8CA /* Formatting */ = {
 			isa = PBXGroup;
 			children = (
-				B1AB57C779ACCDD5779937C4 /* UsageResetFormatter.swift */,
+				8F1C5D4C792A919030D8AF67 /* QuotaFormatting.swift */,
 			);
 			path = Formatting;
 			sourceTree = "<group>";
@@ -219,31 +111,21 @@
 		AAD3C0A100F3DF8E707A0B33 /* UsageShared */ = {
 			isa = PBXGroup;
 			children = (
-				AC9EA8B01B235CEEC17DCFE3 /* Design */,
 				8588BD3A98352A5DCBE2B8CA /* Formatting */,
 				D76DB25CF824FBDFAFD7523A /* Models */,
 				53CCACC72766FB0D1A65E4B4 /* Services */,
-				1503A92CE980D4B6FBBD9E5B /* Store */,
+				F135F97EBA81AAE8CEFD9EA7 /* Storage */,
 				E0758BCAA5AB3D334B61A05F /* Views */,
 			);
 			path = UsageShared;
 			sourceTree = "<group>";
 		};
-		AC9EA8B01B235CEEC17DCFE3 /* Design */ = {
-			isa = PBXGroup;
-			children = (
-				E8D9633B2C32B1299356D30F /* DesignTokens.swift */,
-			);
-			path = Design;
-			sourceTree = "<group>";
-		};
 		C1E7D88F96406CB956355652 /* UsageWidgetApp */ = {
 			isa = PBXGroup;
 			children = (
-				FC79D3C09C576F900AB1FEBF /* AppRootView.swift */,
 				10D425A19019701FCE4D50FE /* Assets.xcassets */,
+				4EEC867AC1675DC813E2EAAB /* ImportView.swift */,
 				CA541A35157B7309AA8A8E1F /* Info.plist */,
-				0866274F0F81507D276D3723 /* UsageDashboardViewModel.swift */,
 				B640D8DC6AB17329FD49BC88 /* UsageWidget.entitlements */,
 				22DC5706B546917B75B76A64 /* UsageWidgetApp.swift */,
 			);
@@ -263,9 +145,7 @@
 		D76DB25CF824FBDFAFD7523A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				169139A6BBFEBCFEEC98AE22 /* UsageProviderKind.swift */,
-				67E2434810A1B0BC4C29C4AE /* UsageSnapshot.swift */,
-				25C40F80B0BA545FDC1E2489 /* UsageWindow.swift */,
+				C7C4102BB9B493ED9C676567 /* QuotaModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,12 +153,18 @@
 		E0758BCAA5AB3D334B61A05F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				59E16E29C7FA3EA1813AC137 /* LiquidGlassPanel.swift */,
-				06A4A414F003F49B6B20D83B /* ProviderBadgeView.swift */,
-				BC3D63D03C995F28FCDE3223 /* UsageLimitRowView.swift */,
-				44E188EA7DEBFDEF58D7D924 /* UsageWidgetContentView.swift */,
+				FBA56744DA9B4CED78EA939A /* QuotaWidgetView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F135F97EBA81AAE8CEFD9EA7 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0F4DADB8A140EE52B475F25A /* QuotaCache.swift */,
+				BB2E0540146B8DD6703D7C48 /* TokenStore.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,23 +187,6 @@
 			productReference = B3C4D19036B48C737BB73BE4 /* UsageWidgetExtension-iOS.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		6B6AF000A4D8ADB913E074E9 /* UsageWidgetExtension-macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 640FB3F93064B0DFD8EBEDDF /* Build configuration list for PBXNativeTarget "UsageWidgetExtension-macOS" */;
-			buildPhases = (
-				00AE49A01EC7307F38E00B64 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "UsageWidgetExtension-macOS";
-			packageProductDependencies = (
-			);
-			productName = "UsageWidgetExtension-macOS";
-			productReference = 21130C040F0D4E198F62D144 /* UsageWidgetExtension-macOS.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		A80C65F38691723802777F59 /* UsageWidgetApp-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CB3D55EBB17104E14E5EEA3 /* Build configuration list for PBXNativeTarget "UsageWidgetApp-iOS" */;
@@ -338,26 +207,6 @@
 			productReference = D9BE702D4614FED0795D1E57 /* UsageWidgetApp-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DF4E3BA363D67860CCC97A03 /* UsageWidgetApp-macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 19DB7F92B7F71E963097F88F /* Build configuration list for PBXNativeTarget "UsageWidgetApp-macOS" */;
-			buildPhases = (
-				3E892C2164D1C166040767AB /* Sources */,
-				7DAA0842E62822D41C84F289 /* Resources */,
-				EB95C31ADA3032900FEF36BC /* Embed Foundation Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A4BE11EC554857F0E6F50B76 /* PBXTargetDependency */,
-			);
-			name = "UsageWidgetApp-macOS";
-			packageProductDependencies = (
-			);
-			productName = "UsageWidgetApp-macOS";
-			productReference = B12C039E5DBB340BC6F43826 /* UsageWidgetApp-macOS.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -371,15 +220,7 @@
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
-					6B6AF000A4D8ADB913E074E9 = {
-						DevelopmentTeam = "";
-						ProvisioningStyle = Automatic;
-					};
 					A80C65F38691723802777F59 = {
-						DevelopmentTeam = "";
-						ProvisioningStyle = Automatic;
-					};
-					DF4E3BA363D67860CCC97A03 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
@@ -400,9 +241,7 @@
 			projectRoot = "";
 			targets = (
 				A80C65F38691723802777F59 /* UsageWidgetApp-iOS */,
-				DF4E3BA363D67860CCC97A03 /* UsageWidgetApp-macOS */,
 				5B538234A6E5A25116D08E5F /* UsageWidgetExtension-iOS */,
-				6B6AF000A4D8ADB913E074E9 /* UsageWidgetExtension-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -416,90 +255,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DAA0842E62822D41C84F289 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				617CCB5995D75A4F9719D83E /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00AE49A01EC7307F38E00B64 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75B618CDF274052D3F190362 /* ClaudeCredentialReader.swift in Sources */,
-				EE8AA6C243FBDF186AEFC66D /* ClaudeUsageService.swift in Sources */,
-				4565D4DA58CBD61E080B11FA /* CodexCredentialReader.swift in Sources */,
-				E1CA67C4F3BE97E049E88D9E /* CodexUsageService.swift in Sources */,
-				1C648DA5E843C2E3055412F0 /* DesignTokens.swift in Sources */,
-				2DE4DD60028405D16263B333 /* LiquidGlassPanel.swift in Sources */,
-				5978B5D11D15022476F47D48 /* ProviderBadgeView.swift in Sources */,
-				4BA5D91D3C33A43144450598 /* UsageLimitRowView.swift in Sources */,
-				E074230A2C0F84659FA9E6C6 /* UsageProviderKind.swift in Sources */,
-				2371D88E910E134246834FF1 /* UsageResetFormatter.swift in Sources */,
-				7DEAAD3715D173DB43E86548 /* UsageSharedStore.swift in Sources */,
-				0463F93C64DC05A6E729F665 /* UsageSnapshot.swift in Sources */,
-				968EFA28C82DBCDCD1BE227E /* UsageSyncService.swift in Sources */,
-				68B3F0268D6C48E707D9CED5 /* UsageTimelineProvider.swift in Sources */,
-				BA3F9680B7511CC5AEF61F1E /* UsageWidget.swift in Sources */,
-				9EDF74DC3120F7F0D4E384B4 /* UsageWidgetBundle.swift in Sources */,
-				95C3781418BE76D0C94EC762 /* UsageWidgetConfigurationIntent.swift in Sources */,
-				C1B2C08ABF7AC8389AEE29EF /* UsageWidgetContentView.swift in Sources */,
-				CC4DBF8E135D969EA753CDF3 /* UsageWindow.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E892C2164D1C166040767AB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B4849D08A83620C7CD78EF9 /* AppRootView.swift in Sources */,
-				E2A8057B8E0FBB9409FAA37B /* ClaudeCredentialReader.swift in Sources */,
-				4088D6148DE779A698FEE37B /* ClaudeUsageService.swift in Sources */,
-				F609F215EAC6C442280835C0 /* CodexCredentialReader.swift in Sources */,
-				DB8CB2A114F98F6FD84D0F36 /* CodexUsageService.swift in Sources */,
-				1E969A4EB8698D2E709F3D59 /* DesignTokens.swift in Sources */,
-				59FF7906D09D9C54B35DAC4A /* LiquidGlassPanel.swift in Sources */,
-				51C8164410698D501AB6493F /* ProviderBadgeView.swift in Sources */,
-				98C7C7392338DC67094A48C6 /* UsageDashboardViewModel.swift in Sources */,
-				C869260E303E0FA2AEB6ADCD /* UsageLimitRowView.swift in Sources */,
-				6793D3DFC30E4168C1EEEEC1 /* UsageProviderKind.swift in Sources */,
-				3ED55306F1C3A3763B26175A /* UsageResetFormatter.swift in Sources */,
-				469BA694111661A35EEE26D0 /* UsageSharedStore.swift in Sources */,
-				BE59460B34D8136C916B6CC8 /* UsageSnapshot.swift in Sources */,
-				FF68E8156F9A754C75747424 /* UsageSyncService.swift in Sources */,
-				3400BC76877347CC7BEB6DB2 /* UsageWidgetApp.swift in Sources */,
-				1A71FB2658FFBEB31363CB36 /* UsageWidgetContentView.swift in Sources */,
-				05C750BE64E0077AF36D6F0B /* UsageWindow.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9D9F96DC211A6A506017C997 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACA4216D5DDF4DA3F820381B /* AppRootView.swift in Sources */,
-				237D68EF31DDCD94BB6E91D0 /* ClaudeCredentialReader.swift in Sources */,
-				628D5AE6919F41273BE37585 /* ClaudeUsageService.swift in Sources */,
-				C56EE8F6EBA0D324A4B98CD0 /* CodexCredentialReader.swift in Sources */,
-				3EDA0CB59AA99D4F289ED2A6 /* CodexUsageService.swift in Sources */,
-				611CA4AAF3157B9BE6488129 /* DesignTokens.swift in Sources */,
-				91CCB0BBA7FA3712738331D0 /* LiquidGlassPanel.swift in Sources */,
-				1451524C413B0175955EF9C8 /* ProviderBadgeView.swift in Sources */,
-				73BE80D0904A85A84441827E /* UsageDashboardViewModel.swift in Sources */,
-				03A184A7C983B8F56523438E /* UsageLimitRowView.swift in Sources */,
-				B60FBA5DC2599EE56F2177CF /* UsageProviderKind.swift in Sources */,
-				2E8A5F76EF5DA5D1D8FB1B94 /* UsageResetFormatter.swift in Sources */,
-				905014FBE7174AB7C15120D1 /* UsageSharedStore.swift in Sources */,
-				03A8C735B1FA25931A1E5060 /* UsageSnapshot.swift in Sources */,
-				B05F32D581536E80DE4C283B /* UsageSyncService.swift in Sources */,
+				6FD834C5E3C7F97E9A11A861 /* ImportView.swift in Sources */,
+				03E53ACF20115A70C5623907 /* QuotaCache.swift in Sources */,
+				CE0261B7F86E3DA3D2E9F344 /* QuotaFetcher.swift in Sources */,
+				2B00BEED4F5EDDD348A5588A /* QuotaFormatting.swift in Sources */,
+				DCEDC848B592BB26BDEFB2E6 /* QuotaModels.swift in Sources */,
+				E0BB527A7053197746B4227D /* QuotaWidgetView.swift in Sources */,
+				7B0E159BA8EC06BFE94D6EA0 /* TokenStore.swift in Sources */,
 				4E17CB7F230960F1B4941A19 /* UsageWidgetApp.swift in Sources */,
-				36502DF0FDD636115662CF44 /* UsageWidgetContentView.swift in Sources */,
-				4F22E060EE94B2074F729DD4 /* UsageWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,25 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB8E79D01B23451C770C4A4B /* ClaudeCredentialReader.swift in Sources */,
-				D9F7F4208DE672553BEC5125 /* ClaudeUsageService.swift in Sources */,
-				53F927F82C1A3FDDFFD8D694 /* CodexCredentialReader.swift in Sources */,
-				4774656661BA896769168243 /* CodexUsageService.swift in Sources */,
-				848E0EF710D143422DB8074A /* DesignTokens.swift in Sources */,
-				AB5A0F9C8483EFCF9479C346 /* LiquidGlassPanel.swift in Sources */,
-				661419560F912BC4EBCFF95C /* ProviderBadgeView.swift in Sources */,
-				0A010D8C12B2B5FB13D01FDF /* UsageLimitRowView.swift in Sources */,
-				624BC106F9561172DF0AE64A /* UsageProviderKind.swift in Sources */,
-				FFC8155ECB9273C3181C44A4 /* UsageResetFormatter.swift in Sources */,
-				D06BC46BA47C50F4EBCCBAE6 /* UsageSharedStore.swift in Sources */,
-				BC33CE7E6210DC3B7AA6ADD1 /* UsageSnapshot.swift in Sources */,
-				88AEF36BC8970F3B818285D1 /* UsageSyncService.swift in Sources */,
-				1C92C2EB84581CA88355908E /* UsageTimelineProvider.swift in Sources */,
-				913471F0F602C5D7823FACAE /* UsageWidget.swift in Sources */,
+				96CBA85310576B396437BDE4 /* QuotaCache.swift in Sources */,
+				ABA2D15C738B6891D8286E08 /* QuotaFetcher.swift in Sources */,
+				ECA8837BD17CE983808CF5CA /* QuotaFormatting.swift in Sources */,
+				B17E4DED82FDDEE99BBF6617 /* QuotaModels.swift in Sources */,
+				868F2E16BAE495A8610E9FB9 /* QuotaWidget.swift in Sources */,
+				7C648FD9A14FACA0E94B7CF6 /* QuotaWidgetView.swift in Sources */,
+				05E4DCF79D8B0F88D81AB5E8 /* TokenStore.swift in Sources */,
 				6634D8C1173E062306DD87DA /* UsageWidgetBundle.swift in Sources */,
-				23ED5D487E5792C58D840DB6 /* UsageWidgetConfigurationIntent.swift in Sources */,
-				14859B83AF15860B6B3440E1 /* UsageWidgetContentView.swift in Sources */,
-				3FCD8A427E3299FC3E2EB1E2 /* UsageWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,52 +296,9 @@
 			target = 5B538234A6E5A25116D08E5F /* UsageWidgetExtension-iOS */;
 			targetProxy = D8F65C75C724FDA914BB1DC0 /* PBXContainerItemProxy */;
 		};
-		A4BE11EC554857F0E6F50B76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6B6AF000A4D8ADB913E074E9 /* UsageWidgetExtension-macOS */;
-			targetProxy = 494FB0943F7CF81F80829E9A /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		24D3A3EB00A7282C83D76E20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = UsageWidgetApp/UsageWidget.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = UsageWidgetApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.awaishashar.UsageWidget;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		48388392B2E3143BB8777988 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = UsageWidgetExtension/UsageWidgetExtension.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = UsageWidgetExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Usage Widget";
-				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.awaishashar.UsageWidget.widget;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 		6951DE028F6033C38C462921 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -631,34 +347,16 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
-		};
-		703DD3A5E20EEA702588BFAA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = UsageWidgetApp/UsageWidget.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = UsageWidgetApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.awaishashar.UsageWidget;
-				SDKROOT = macosx;
-			};
-			name = Debug;
 		};
 		7C8F2939CFA1FFBCB1736506 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -776,11 +474,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = complete;
@@ -808,26 +506,6 @@
 			};
 			name = Release;
 		};
-		FD6D705EFA4C96FA97D1058B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = UsageWidgetExtension/UsageWidgetExtension.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = UsageWidgetExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Usage Widget";
-				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.awaishashar.UsageWidget.widget;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -836,24 +514,6 @@
 			buildConfigurations = (
 				8ABB3FCD933EF8C42DEC0CB3 /* Debug */,
 				957AE9248C47A8182C604C5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		19DB7F92B7F71E963097F88F /* Build configuration list for PBXNativeTarget "UsageWidgetApp-macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				703DD3A5E20EEA702588BFAA /* Debug */,
-				24D3A3EB00A7282C83D76E20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		640FB3F93064B0DFD8EBEDDF /* Build configuration list for PBXNativeTarget "UsageWidgetExtension-macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD6D705EFA4C96FA97D1058B /* Debug */,
-				48388392B2E3143BB8777988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

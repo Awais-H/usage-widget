@@ -2,6 +2,7 @@
 *.log
 .env
 .env.local
+build/
 
 # Xcode
 DerivedData/

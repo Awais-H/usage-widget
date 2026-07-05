@@ -4,6 +4,6 @@ import SwiftUI
 @main
 struct UsageWidgetBundle: WidgetBundle {
     var body: some Widget {
-        UsageWidget()
+        QuotaWidget()
     }
 }
