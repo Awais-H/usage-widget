@@ -10,9 +10,13 @@ SwiftUI + WidgetKit app with liquid glass UI. Shows 5-hour session and 7-day wee
 cd native && brew install xcodegen && xcodegen generate && open UsageWidget.xcodeproj
 ```
 
-Run the app once, then add the **AI Usage** widget. Details: [`native/README.md`](native/README.md).
+1. Set your Development Team in Xcode.
+2. Run **UsageWidget-macOS** or **UsageWidget-iOS**.
+3. Add the **AI Usage** widget and pick a provider.
 
-Requires Xcode 26, and local sign-in via `claude /login` and/or `codex login`.
+Requires Xcode 26. Sign in locally first: `claude /login` and/or `codex login`.
+
+App Group (change in entitlements + `UsageSharedStore.swift`): `group.dev.awaishashar.usage-widget`
 
 ## Menu bar app (Cursor)
 
