@@ -21,9 +21,9 @@ enum WidgetDesign {
     static let claudeAccent = Color(red: 0.83, green: 0.48, blue: 0.35) // #D37A5A
     static let codexAccent = Color(red: 0.30, green: 0.64, blue: 0.48) // #4CA37B
 
-    static func progressColor(for remaining: Double) -> Color {
-        if remaining > 50 { return Color(red: 0.30, green: 0.85, blue: 0.39) } // #4CD964
-        if remaining > 20 { return Color(red: 0.96, green: 0.65, blue: 0.14) } // #F5A623
+    static func progressColor(forUsed used: Double) -> Color {
+        if used < 50 { return Color(red: 0.30, green: 0.85, blue: 0.39) } // #4CD964
+        if used < 80 { return Color(red: 0.96, green: 0.65, blue: 0.14) } // #F5A623
         return Color(red: 1.0, green: 0.23, blue: 0.19) // #FF3B30
     }
 }

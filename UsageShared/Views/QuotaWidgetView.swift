@@ -19,17 +19,19 @@ struct QuotaColumnView: View {
     }
 
     private func quotaRow(label: String, window: QuotaWindow, weekly: Bool) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
+        let usedPercent = showsResetTimes ? max(0, 100 - window.remainingPercent) : 0
+
+        return VStack(alignment: .leading, spacing: 4) {
             HStack(spacing: 8) {
                 WidgetTypography.rowLabel(label)
                     .frame(width: WidgetDesign.rowLabelWidth, alignment: .leading)
 
                 WidgetGlassProgressBar(
-                    value: window.remainingPercent,
-                    tint: barColor(for: window.remainingPercent)
+                    value: usedPercent,
+                    tint: barColor(forUsed: usedPercent)
                 )
 
-                WidgetTypography.percentage(Int(window.remainingPercent.rounded()))
+                WidgetTypography.percentage(Int(usedPercent.rounded()))
             }
 
             if showsResetTimes,
@@ -40,9 +42,9 @@ struct QuotaColumnView: View {
         }
     }
 
-    private func barColor(for remaining: Double) -> Color {
+    private func barColor(forUsed used: Double) -> Color {
         guard showsResetTimes else { return WidgetDesign.progressBarTrack }
-        return WidgetDesign.progressColor(for: remaining)
+        return WidgetDesign.progressColor(forUsed: used)
     }
 }
 

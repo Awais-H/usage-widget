@@ -2,9 +2,9 @@
 
 <img width="350" alt="Agent Usage widget showing Claude and Codex limits on an iPhone Home Screen" src="https://github.com/user-attachments/assets/6b51bf19-5f6e-4cae-a2ec-de2847d92ef8" />
 
-Claude Code and Codex usage on your iPhone Home Screen — inspired by [shuangzi-xubei](https://github.com/wgjuan2314/shuangzi-xubei).
+Claude Code and Codex usage on your iPhone Home Screen.
 
-Medium widget, two columns, **5h** + **Week** bars with reset times. Tokens live on the phone; the widget fetches usage directly (works when your Mac is off).
+Medium widget, two columns, **5h** + **Week** bars. Each bar shows **how much you’ve used** (not how much is left) — `90%` means 90% of that limit consumed. Reset times appear under each bar when tokens are imported.
 
 ## Requirements
 
@@ -113,11 +113,15 @@ On Windows/Linux, build this JSON manually from your auth files. Field names mus
 | | |
 |---|---|
 | **Claude / Codex** | One column per imported token |
-| **5h** | Rolling 5-hour window remaining |
-| **Week** | 7-day quota remaining |
-| **%** | Remaining (not used) — `62%` ≈ 62% left |
-| **Bar color** | Green >50% · Orange 20–50% · Red <20% |
-| **Reset line** | `14:30 reset` (5h) or `Jan 19 reset` (week) |
+| **5h** | Rolling 5-hour session limit |
+| **Week** | 7-day quota |
+| **%** | **Used** — share of the limit you’ve consumed |
+| **Bar** | Fills to the same used % (full bar ≈ limit reached) |
+| **Bar color** | Green <50% used · Orange 50–80% · Red >80% |
+| **Reset line** | When that window refills — `14:30 reset` (5h) or `Jan 19 reset` (week) |
+| **No token** | Bar stays at **0%**, no reset line |
+
+**Example:** `5h` at **38%** with a green bar means you’ve used about 38% of your current 5-hour window. The **Week** row below is the separate weekly cap.
 
 ---
 
@@ -145,16 +149,5 @@ xcodegen generate
 - App Group: `group.dev.awaishashar.usage-widget` (app + extension targets).
 - Extension bundle ID must be a child of the app: `dev.awaishashar.UsageWidget.widget`.
 - Enable **App Groups** capability for your Team in the Apple Developer portal if signing fails.
-
----
-
-## How it works
-
-- Tokens → App Group `UserDefaults` (shared by app and widget).
-- Claude: `GET api.anthropic.com/api/oauth/usage`
-- Codex: `GET chatgpt.com/backend-api/wham/usage`
-- Failed fetches use cached data.
-
-Tokens never leave your device except the one-time paste from Mac to phone. Usage APIs are unofficial.
 
 MIT
