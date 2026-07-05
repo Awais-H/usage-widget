@@ -26,6 +26,48 @@ Long-press Home Screen → add **AI Usage** (medium size).
 
 The widget refreshes about every 12 minutes.
 
+## Reading the widget
+
+Each column is one tool. Each column has **two bars**.
+
+### Columns
+
+| Label | What it is |
+| --- | --- |
+| **Claude** | Claude Code subscription usage |
+| **Codex** | OpenAI Codex subscription usage |
+
+If you only imported one token, you will only see that column.
+
+### Bars (per column)
+
+| Bar | Meaning |
+| --- | --- |
+| **5h** | Rolling **5-hour session limit** — how much of your current window is left. Resets on a rolling timer (not at midnight). |
+| **Week** | **Weekly limit** — how much of your 7-day quota is left. This is separate from the 5-hour window. |
+
+### How to read a bar
+
+- **Percentage** = **remaining** quota (not used). For example, `62%` means about 62% left and ~38% used.
+- **Bar fill** = the same thing visually.
+- **Color**
+  - Green: more than 50% left
+  - Orange: 20–50% left
+  - Red: less than 20% left
+- **Reset line** under each bar = when that window refills
+  - **5h**: a time like `14:30 reset`
+  - **Week**: a date like `7/12 reset`
+
+### Top of the widget
+
+- **AI Usage Left** — widget title
+- **`5m ago`** — when usage was last fetched successfully
+- **`⚠`** — the latest fetch failed; the widget is showing cached data
+
+### Example
+
+**Claude → 5h → 62%** with **`14:30 reset`** means you still have about 62% of your current 5-hour Claude window left, and that window refills around 2:30 PM. The **Week** bar below it is your separate weekly cap.
+
 ## Build
 
 ```bash
