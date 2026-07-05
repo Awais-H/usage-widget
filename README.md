@@ -1,4 +1,5 @@
 # Usage Widget
+<img width="350" height="738" alt="image" src="https://github.com/user-attachments/assets/6b51bf19-5f6e-4cae-a2ec-de2847d92ef8" />
 
 See Claude Code and Codex limits on your iPhone — inspired by [shuangzi-xubei](https://github.com/wgjuan2314/shuangzi-xubei), rewritten in Swift.
 
