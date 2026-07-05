@@ -68,7 +68,7 @@ targets:
       - path: UsageShared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageWidgetExtension
+        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageWidget.widget
         INFOPLIST_FILE: UsageWidgetExtension/Info.plist
         CODE_SIGN_ENTITLEMENTS: UsageWidgetExtension/UsageWidgetExtension.entitlements
         MARKETING_VERSION: "1.0"
@@ -86,7 +86,7 @@ targets:
       - path: UsageShared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageWidgetExtension
+        PRODUCT_BUNDLE_IDENTIFIER: dev.awaishashar.UsageWidget.widget
         INFOPLIST_FILE: UsageWidgetExtension/Info.plist
         CODE_SIGN_ENTITLEMENTS: UsageWidgetExtension/UsageWidgetExtension.entitlements
         MARKETING_VERSION: "1.0"
