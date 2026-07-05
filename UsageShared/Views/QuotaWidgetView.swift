@@ -6,10 +6,8 @@ struct QuotaColumnView: View {
     let quota: PlatformQuota
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(title)
-                .font(.subheadline.bold())
-                .foregroundStyle(tint)
+        VStack(alignment: .leading, spacing: 8) {
+            WidgetTypography.columnTitle(title, tint: tint)
 
             quotaRow(label: "5h", window: quota.fiveHour, weekly: false)
             quotaRow(label: "Week", window: quota.sevenDay, weekly: true)
@@ -17,25 +15,21 @@ struct QuotaColumnView: View {
     }
 
     private func quotaRow(label: String, window: QuotaWindow, weekly: Bool) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
-            HStack(spacing: 6) {
-                Text(label)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .frame(width: 32, alignment: .leading)
+        VStack(alignment: .leading, spacing: 3) {
+            HStack(spacing: 8) {
+                WidgetTypography.rowLabel(label)
+                    .frame(width: 36, alignment: .leading)
 
-                ProgressView(value: window.remainingPercent, total: 100)
-                    .tint(color(for: window.remainingPercent))
+                WidgetGlassProgressBar(
+                    value: window.remainingPercent,
+                    tint: color(for: window.remainingPercent)
+                )
 
-                Text("\(Int(window.remainingPercent.rounded()))%")
-                    .font(.caption.monospacedDigit())
-                    .foregroundStyle(.primary)
+                WidgetTypography.percentage(Int(window.remainingPercent.rounded()))
             }
 
-            Text(QuotaFormatting.resetText(for: window.resetsAt, weekly: weekly))
-                .font(.caption2)
-                .foregroundStyle(.tertiary)
-                .padding(.leading, 38)
+            WidgetTypography.resetTime(QuotaFormatting.resetText(for: window.resetsAt, weekly: weekly))
+                .padding(.leading, 44)
         }
     }
 
@@ -50,48 +44,45 @@ struct QuotaWidgetView: View {
     let snapshot: QuotaSnapshot
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack {
-                Text("AI Usage Left")
-                    .font(.subheadline.bold())
-                    .foregroundStyle(.white)
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .firstTextBaseline) {
+                WidgetTypography.title("AI Usage Left")
+                    .foregroundStyle(.primary)
 
-                Spacer()
+                Spacer(minLength: 8)
 
-                Text((snapshot.isOffline ? "⚠ " : "") + QuotaFormatting.agoText(since: snapshot.updatedAt))
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+                WidgetTypography.timestamp(
+                    (snapshot.isOffline ? "⚠ " : "") + QuotaFormatting.agoText(since: snapshot.updatedAt)
+                )
             }
 
             content
         }
-        .padding(14)
+        .padding(WidgetDesign.contentPadding)
     }
 
     @ViewBuilder
     private var content: some View {
         if snapshot.claude == nil && snapshot.codex == nil {
-            Text("Import tokens on your Mac, paste JSON here once, then add this widget.")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            WidgetTypography.body("Import tokens on your Mac, paste JSON here once, then add this widget.")
         } else if snapshot.claude != nil && snapshot.codex != nil,
                   let claude = snapshot.claude,
                   let codex = snapshot.codex {
-            HStack(alignment: .top, spacing: 12) {
-                QuotaColumnView(title: "Claude", tint: Color(red: 0.85, green: 0.47, blue: 0.34), quota: claude)
-                Divider().overlay(Color.white.opacity(0.15))
-                QuotaColumnView(title: "Codex", tint: Color(red: 0.06, green: 0.64, blue: 0.50), quota: codex)
+            HStack(alignment: .top, spacing: 14) {
+                QuotaColumnView(title: "Claude", tint: WidgetDesign.claudeTint, quota: claude)
+                Divider().overlay(Color.primary.opacity(0.12))
+                QuotaColumnView(title: "Codex", tint: WidgetDesign.codexTint, quota: codex)
             }
         } else if let claude = snapshot.claude {
             HStack {
                 Spacer()
-                QuotaColumnView(title: "Claude", tint: Color(red: 0.85, green: 0.47, blue: 0.34), quota: claude)
+                QuotaColumnView(title: "Claude", tint: WidgetDesign.claudeTint, quota: claude)
                 Spacer()
             }
         } else if let codex = snapshot.codex {
             HStack {
                 Spacer()
-                QuotaColumnView(title: "Codex", tint: Color(red: 0.06, green: 0.64, blue: 0.50), quota: codex)
+                QuotaColumnView(title: "Codex", tint: WidgetDesign.codexTint, quota: codex)
                 Spacer()
             }
         }
@@ -113,5 +104,7 @@ struct QuotaWidgetView: View {
             isOffline: false
         )
     )
-    .background(Color(red: 0.11, green: 0.11, blue: 0.12))
+    .background {
+        WidgetGlassBackground()
+    }
 }

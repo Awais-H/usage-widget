@@ -53,7 +53,7 @@ struct QuotaWidget: Widget {
         StaticConfiguration(kind: kind, provider: QuotaTimelineProvider()) { entry in
             QuotaWidgetView(snapshot: entry.snapshot)
                 .containerBackground(for: .widget) {
-                    Color(red: 0.11, green: 0.11, blue: 0.12)
+                    WidgetGlassBackground()
                 }
         }
         .configurationDisplayName("AI Usage")
