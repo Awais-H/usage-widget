@@ -1,0 +1,26 @@
+node_modules/
+dist/
+out/
+release/
+.DS_Store
+*.log
+.env
+.env.local
+
+# Swift / Xcode
+native/**/DerivedData/
+native/**/build/
+native/**/*.xcuserstate
+native/**/*.xcuserdatad/
+native/**/xcuserdata/
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.swp
+*~.nib
+
+# Cursor skill assets (installed locally)
+.cursor/
