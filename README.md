@@ -1,63 +1,34 @@
 # Usage Widget
 
-Track AI coding assistant usage limits from your Mac or iPhone.
+Track AI coding assistant usage limits on Mac and iPhone.
 
-This repo contains two clients:
+## Native widgets (Claude Code & Codex)
 
-1. **Native widgets (recommended)** — SwiftUI + WidgetKit for iPhone and Mac with liquid glass UI, Claude Code and Codex limits, and reset times.
-2. **Electron menu bar app** — Cursor subscription usage in the menu bar.
-
-## Native widgets (iPhone + Mac)
-
-Shows rolling **5-hour session** and **7-day weekly** usage for:
-
-- **Claude Code** — reads local OAuth credentials and calls Anthropic's usage endpoint
-- **Codex** — reads `~/.codex/auth.json` and calls OpenAI's Codex usage endpoint
-
-See [`native/README.md`](native/README.md) for Xcode setup.
+SwiftUI + WidgetKit app with liquid glass UI. Shows 5-hour session and 7-day weekly limits with reset times.
 
 ```bash
-cd native
-brew install xcodegen
-xcodegen generate
-open UsageWidget.xcodeproj
+cd native && brew install xcodegen && xcodegen generate && open UsageWidget.xcodeproj
 ```
 
-Run the app once, then add the **AI Usage** widget to your Home Screen or Notification Center.
+Run the app once, then add the **AI Usage** widget. Details: [`native/README.md`](native/README.md).
 
-## Electron menu bar app (Cursor)
+Requires Xcode 26, and local sign-in via `claude /login` and/or `codex login`.
 
-A lightweight macOS menu bar app that shows Cursor subscription usage at a glance.
+## Menu bar app (Cursor)
 
-### Requirements
-
-- macOS
-- Node.js 18+
-- Cursor installed and signed in
-
-### Getting started
+Electron tray app for Cursor subscription usage.
 
 ```bash
-npm install
-npm run dev
+npm install && npm run dev
 ```
 
-### Scripts
+Requires macOS, Node 18+, and Cursor signed in.
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the app in development mode |
-| `npm run build` | Build main, preload, and renderer bundles |
-| `npm run preview` | Preview the production build |
-| `npm run typecheck` | Run TypeScript checks |
-
-## Project structure
+## Layout
 
 ```text
-native/          SwiftUI app + WidgetKit extension (iPhone + Mac)
-src/             Electron menu bar app for Cursor usage
+native/   iPhone + Mac widgets
+src/      Cursor menu bar app
 ```
-
-## License
 
 MIT
